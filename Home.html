@@ -6,16 +6,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'trebuchet ms', sans-serif;
+            background-color: #ECEEF4;
         }
 
         .sidebar {
-            background-color: #DCE3E7;
-            color: #262626;
+            background-color: #363A53;
+            color: #5F647C;
             width: 10px;
             height: 100vh;
-            border-radius: 20px;
-            margin: 10px;
             text-align: center;
 
 
@@ -24,22 +23,24 @@
         .brand {
             padding: 10px;
             text-align: center;
-            background-color: #DCE3E7;
+            background-color: #788CEC;
             margin-top: 15px;
+            border-radius: 20px;
         }
 
         .brand-logo {
             display: block;
             width: 50px;
             /* Set the desired logo width */
-            height: auto;
-            margin: 10px;
+            height: 50px;
+
         }
 
         .brand-name {
-            margin-top: 10px;
+          
             font-weight: bold;
             font-size: 20px;
+            color: #fff;
 
         }
 
@@ -50,18 +51,19 @@
         }
 
         .sidebar-item:hover {
-            background-color: #262626;
+            background-color: #313450;
             color: #DCE3E7;
-            border-radius: 20px;
+
         }
 
         .sidebar-item.active {
-            background-color: #262626;
+            background-color: #313450;
             color: #DCE3E7;
-            border-radius: 20px;
+
             /* Set your desired active item color */
         }
-/* هذولي احس نقدر نجمعهم بكلاس واحد بس ماعرفت مخي تعب*/
+
+        /* هذولي احس نقدر نجمعهم بكلاس واحد بس ماعرفت مخي تعب*/
         .content {
             padding: 20px;
         }
@@ -75,24 +77,43 @@
             margin-top: 30px;
             margin-left: 8px;
         }
-/*اللون في challenge task and Todotask مفروض اليوزر يقدر يختارهم*/
+
+        /*اللون في challenge task and Todotask مفروض اليوزر يقدر يختارهم*/
         .ChallengeTask {
             border-radius: 20px;
-            background-color: #C0C4EA;
+            background-color: #fff;
             padding: 20px;
             margin: 20px;
             width: 450px;
             height: 150px;
-        }
-        .ToDoTask {
-            border-radius: 20px;
-            background-color: #FEC4C4;
-            padding: 20px;
-            margin: 20px;
-            width: 450px;
-            height: 150px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
 
+        .ChallengeTask:hover {
+            border-radius: 20px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            width: 450px;
+            height: 250px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .ToDoTask:hover {
+            background-color: #fff;
+            width: 450px;
+            height: 250px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .ToDoTask{
+            width: 450px;
+            height: 220px;
+            background-color: #fff;
+             margin: 20px;
+        }
+
+       
         .Task-title {
 
             margin-bottom: 10px;
@@ -122,87 +143,94 @@
             color: #262626;
 
         }
-        a:link { 
+
+        a:link {
             color: inherit;
-            text-decoration:none;
-         } 
-         a { 
+            text-decoration: none;
+        }
+
+        a {
             color: inherit;
 
-         } 
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 sidebar">
+            <div class="col-2 sidebar">
                 <div class="brand">
-                    <img class="brand-logo" src="Icons/Logo.png" alt="Logo">
+
                     <div class="brand-name">Today?</div>
                 </div>
-                <a href="Home.html"><div class="sidebar-item active">Home</div></a>
-                <a href="Challenges.html"><div class="sidebar-item">Challenges</div></a>
-                <a href="#"><div class="sidebar-item">Todo</div></a>
-                    <a href="#"><div class="sidebar-item">Sign out</div></a>
+                <a href="Home.html">
+                    <div class="sidebar-item active">Home</div>
+                </a>
+
+                <a href="Challenges.html">
+                    <div class="sidebar-item">Challenges</div>
+                </a>
+                <a href="#">
+                    <div class="sidebar-item">Todo</div>
+                </a>
+                <a href="#">
+                    <div class="sidebar-item">Sign out</div>
+                </a>
             </div>
             <div class="col-9 content">
                 <div class="welcome">
-                    <h1>Hi Alanoud</h1>
+                    <h1>Hello Alanoud</h1>
                     <p>Welcome back, you have 5 tasks due tomorrow. lets finish them now!</p>
 
                 </div>
-                 <!--هذي مفروض تتعبى حسب اليوزر وش عنده -->
-                <div class="row sections">
-                    <div class="col">
-                        <h6>Challenges</h6>
-                    </div>
-                    <div class="col">
-                        <h6>ToDo</h6>
-                    </div>
-                </div>
+                <!--هذي مفروض تتعبى حسب اليوزر وش عنده -->
                 <div class="row">
-                    <div class="ChallengeTask">
-                        <h3 class="Task-title">Web project</h3>
-                        <p class="Task-description">Design and build a website for students.</p>
-                        <strong>
-                            <p class="Task-title2">Challenge members:</p>
-                        </strong>
-                        <p class="Task-description">Reem, Majd, You</p>
+                    <div class="column">
+                        <div class="card mb-3 ToDoTask">
+                            <div class="card-header ">Challenge</div>
+                            <div class="card-body">
+                                <h5 class="card-title" style=" font-weight: bold;">Challenge name</h5>
+                                <p class="card-text">Challenge describtion </p>
+                                <!--from database-->
+                                <h5 class="card-title" style=" font-weight: bold;">Challenge Members</h5>
+                                <p class="card-text">name of users</p>
+                                <!--from database-->
+                            </div>
+                            <div class="card mb-3" style="width: 450px;
+                            height: 220px ;background-color: #fff;">
+                            <div class="card-body">
+                                <h5 class="card-title" style=" font-weight: bold;">Challenge name</h5>
+                                <p class="card-text">Challenge describtion </p>
+                                <!--from database-->
+                                <h5 class="card-title" style=" font-weight: bold;">Challenge Members</h5>
+                                <p class="card-text">name of users</p>
+                                <!--from database-->
+                            </div> </div>
+                        </div>
                     </div>
-                    <div class="ToDoTask">
-                        <h3 class="Task-title">Web project</h3>
-                        <p class="Task-description">Design and build a website for students.</p>
-                        <strong>
-                            <p class="Task-title2">Challenge members:</p>
-                        </strong>
-                        <p class="Task-description">Reem, Majd, You</p>
-                    </div>
-              
-                <div class="row">
-                    <div class="ChallengeTask">
-                        <h3 class="Task-title">Web project</h3>
-                        <p class="Task-description">Design and build a website for students.</p>
-                        <strong>
-                            <p class="Task-title2">Challenge members:</p>
-                        </strong>
-                        <p class="Task-description">Reem, Majd, You</p>
-                    </div>
-                    <div class="ToDoTask">
-                        <h3 class="Task-title">Web project</h3>
-                        <p class="Task-description">Design and build a website for students.</p>
-                        <strong>
-                            <p class="Task-title2">Challenge members:</p>
-                        </strong>
-                        <p class="Task-description">Reem, Majd, You</p>
-                    </div>
-                    
-                </div>
-            </div>
 
+                    <div class="column">
+
+                        <div class="card mb-3" style="width: 450px;
+                        height: 220px;background-color:#fff; margin: 20px;">
+                            <div class="card-header ">ToDo</div>
+                            <div class="card-body">
+                                <h5 class="card-title" style=" font-weight: bold;">task name</h5>
+                                <p class="card-text">task describtion </p>
+                                <!--from database-->
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

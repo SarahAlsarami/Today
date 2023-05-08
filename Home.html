@@ -9,17 +9,13 @@
             font-family: 'trebuchet ms', sans-serif;
             background-color: #ECEEF4;
         }
-
         .sidebar {
             background-color: #363A53;
             color: #5F647C;
             width: 10px;
             height: 100vh;
             text-align: center;
-
-
         }
-
         .brand {
             padding: 10px;
             text-align: center;
@@ -27,23 +23,12 @@
             margin-top: 15px;
             border-radius: 20px;
         }
-
-        .brand-logo {
-            display: block;
-            width: 50px;
-            /* Set the desired logo width */
-            height: 50px;
-
-        }
-
         .brand-name {
-          
             font-weight: bold;
-            font-size: 20px;
+            font-size: 24px;
             color: #fff;
 
         }
-
         .sidebar-item {
             padding: 10px;
             margin-top: 20px;
@@ -53,32 +38,18 @@
         .sidebar-item:hover {
             background-color: #313450;
             color: #DCE3E7;
-
         }
 
         .sidebar-item.active {
             background-color: #313450;
             color: #DCE3E7;
-
-            /* Set your desired active item color */
         }
-
-        /* هذولي احس نقدر نجمعهم بكلاس واحد بس ماعرفت مخي تعب*/
         .content {
-            padding: 20px;
-        }
-
-        .welcome {
-            margin-top: 20px;
-            margin-left: 20px;
-        }
-
-        .sections {
+            padding: 30px;
             margin-top: 30px;
-            margin-left: 8px;
+            margin-left: 30px;
         }
 
-        /*اللون في challenge task and Todotask مفروض اليوزر يقدر يختارهم*/
         .ChallengeTask {
             border-radius: 20px;
             background-color: #fff;
@@ -90,7 +61,6 @@
         }
 
         .ChallengeTask:hover {
-            border-radius: 20px;
             background-color: #fff;
             padding: 20px;
             margin: 20px;
@@ -102,7 +72,8 @@
         .ToDoTask:hover {
             background-color: #fff;
             width: 450px;
-            height: 250px;
+            height: 500px;
+            margin: 20px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
 
@@ -111,6 +82,7 @@
             height: 220px;
             background-color: #fff;
              margin: 20px;
+             box-shadow: rgba(149, 157, 165, 0.2) 0px 0.1px 17px;
         }
 
        
@@ -197,8 +169,8 @@
                                 <p class="card-text">name of users</p>
                                 <!--from database-->
                             </div>
-                            <div class="card mb-3" style="width: 450px;
-                            height: 220px ;background-color: #fff;">
+                            </div>
+                            <div class="card mb-3 ToDoTask">
                             <div class="card-body">
                                 <h5 class="card-title" style=" font-weight: bold;">Challenge name</h5>
                                 <p class="card-text">Challenge describtion </p>
@@ -207,13 +179,12 @@
                                 <p class="card-text">name of users</p>
                                 <!--from database-->
                             </div> </div>
-                        </div>
+                        
                     </div>
 
                     <div class="column">
 
-                        <div class="card mb-3" style="width: 450px;
-                        height: 220px;background-color:#fff; margin: 20px;">
+                        <div class="card mb-3 ToDoTask">
                             <div class="card-header ">ToDo</div>
                             <div class="card-body">
                                 <h5 class="card-title" style=" font-weight: bold;">task name</h5>
@@ -221,6 +192,15 @@
                                 <!--from database-->
                             </div>
                         </div>
+                        <div class="card mb-3 ToDoTask">
+                            
+                            <div class="card-body">
+                                <h5 class="card-title" style=" font-weight: bold;">task name</h5>
+                                <p class="card-text">task describtion </p>
+                                <!--from database-->
+                            </div>
+                        </div>
+
 
 
                     </div>

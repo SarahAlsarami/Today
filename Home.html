@@ -4,128 +4,11 @@
 <head>
     <title>Today?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'trebuchet ms', sans-serif;
-            background-color: #ECEEF4;
-        }
-        .sidebar {
-            background-color: #363A53;
-            color: #5F647C;
-            width: 10px;
-            height: 100vh;
-            text-align: center;
-        }
-        .brand {
-            padding: 10px;
-            text-align: center;
-            background-color: #788CEC;
-            margin-top: 15px;
-            border-radius: 20px;
-        }
-        .brand-name {
-            font-weight: bold;
-            font-size: 24px;
-            color: #fff;
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="contentStyle.css">
+    <link rel="stylesheet" href="progressbar.css">
+   
 
-        }
-        .sidebar-item {
-            padding: 10px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        .sidebar-item:hover {
-            background-color: #313450;
-            color: #DCE3E7;
-        }
-
-        .sidebar-item.active {
-            background-color: #313450;
-            color: #DCE3E7;
-        }
-        .content {
-            padding: 30px;
-            margin-top: 30px;
-            margin-left: 30px;
-        }
-
-        .ChallengeTask {
-            border-radius: 20px;
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px;
-            width: 450px;
-            height: 150px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
-
-        .ChallengeTask:hover {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px;
-            width: 450px;
-            height: 250px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
-
-        .ToDoTask:hover {
-            background-color: #fff;
-            width: 450px;
-            height: 500px;
-            margin: 20px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
-
-        .ToDoTask{
-            width: 450px;
-            height: 220px;
-            background-color: #fff;
-             margin: 20px;
-             box-shadow: rgba(149, 157, 165, 0.2) 0px 0.1px 17px;
-        }
-
-       
-        .Task-title {
-
-            margin-bottom: 10px;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 20px;
-            line-height: 24px;
-
-            color: #262626;
-        }
-
-        .Task-title2 {
-            margin-bottom: 10px;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 16px;
-            line-height: 20px;
-
-            color: #262626;
-        }
-
-        .Task-description {
-            font-style: lighter;
-            font-weight: 100;
-            font-size: 16px;
-            line-height: 5px;
-            color: #262626;
-
-        }
-
-        a:link {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        a {
-            color: inherit;
-
-        }
-    </style>
 </head>
 
 <body>
@@ -159,58 +42,96 @@
                 <!--هذي مفروض تتعبى حسب اليوزر وش عنده -->
                 <div class="row">
                     <div class="column">
-                        <div class="card mb-3 ToDoTask">
-                            <div class="card-header ">Challenge</div>
-                            <div class="card-body">
-                                <h5 class="card-title" style=" font-weight: bold;">Challenge name</h5>
-                                <p class="card-text">Challenge describtion </p>
-                                <!--from database-->
-                                <h5 class="card-title" style=" font-weight: bold;">Challenge Members</h5>
-                                <p class="card-text">name of users</p>
-                                <!--from database-->
-                            </div>
-                            </div>
-                            <div class="card mb-3 ToDoTask">
-                            <div class="card-body">
-                                <h5 class="card-title" style=" font-weight: bold;">Challenge name</h5>
-                                <p class="card-text">Challenge describtion </p>
-                                <!--from database-->
-                                <h5 class="card-title" style=" font-weight: bold;">Challenge Members</h5>
-                                <p class="card-text">name of users</p>
-                                <!--from database-->
-                            </div> </div>
-                        
-                    </div>
-
-                    <div class="column">
-
-                        <div class="card mb-3 ToDoTask">
-                            <div class="card-header ">ToDo</div>
-                            <div class="card-body">
-                                <h5 class="card-title" style=" font-weight: bold;">task name</h5>
-                                <p class="card-text">task describtion </p>
-                                <!--from database-->
-                            </div>
-                        </div>
-                        <div class="card mb-3 ToDoTask">
-                            
-                            <div class="card-body">
-                                <h5 class="card-title" style=" font-weight: bold;">task name</h5>
-                                <p class="card-text">task describtion </p>
-                                <!--from database-->
-                            </div>
-                        </div>
-
-
+                        <a href="Challenges.html">
+                            <div class="card mb-3" style="width: 450px; margin: 20px;">
+                                <div class="card-header ">Challenges</div>
+                        </a>
 
                     </div>
+                    <div class="card mb-3 Task">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5"> <!-- Use appropriate column size based on your layout -->
+                                    <h5 class="card-title">Challenge name</h5>
+                                    <p class="card-text">Challenge description</p>
+                                    <!-- From database -->
+                                    <p class="card-text">Challenge Members:</p>
+                                    <p class="card-text">Name of users</p>
+                                    <!-- From database -->
+                                </div>
+                                <div class="col-md-7 row"> <!-- Use appropriate column size based on your layout -->
+                                    <div class="progress">
+                                        
+                                        <div class="barOverflow">
+                                          <div class="bar"></div>
+                                          
+                                        </div>
+                                        <span class="progressVal">10%</span>
+                                        <span class="progressVal counter">5 days left</span>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 Task">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5"> <!-- Use appropriate column size based on your layout -->
+                                    <h5 class="card-title">Challenge name</h5>
+                                    <p class="card-text">Challenge description</p>
+                                    <!-- From database -->
+                                    <p class="card-text">Challenge Members:</p>
+                                    <p class="card-text">Name of users</p>
+                                    <!-- From database -->
+                                </div>
+                                <div class="col-md-7 row"> <!-- Use appropriate column size based on your layout -->
+                                    <div class="progress">
+                                        
+                                        <div class="barOverflow">
+                                          <div class="bar"></div>
+                                          
+                                        </div>
+                                        <span class="progressVal">🤩</span>
+                                        <span class="progressVal counter">5 days left</span>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="column">
+                    <div class="card mb-3" style="width: 450px; margin: 20px;">
+                        <div class="card-header ">ToDo</div>
+
+                    </div>
+
+                    <div class="card mb-3 Task">
+
+                        <div class="card-body">
+                            <h5 class="card-title">task name</h5>
+                            <p class="card-text">task describtion </p>
+                            <!--from database-->
+                        </div>
+                    </div>
+                    <div class="card mb-3 Task">
+
+                        <div class="card-body">
+                            <h5 class="card-title">task name</h5>
+                            <p class="card-text">task describtion </p>
+                            <!--from database-->
+                        </div>
+                    </div>
 
 
 
                 </div>
+
             </div>
         </div>
+    </div>
 </body>
 
 </html>

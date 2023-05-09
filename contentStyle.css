@@ -1,0 +1,38 @@
+body {
+    font-family: 'trebuchet ms', sans-serif;
+    background-color: #ECEEF4;
+}
+
+.content {
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.Task:hover {
+    background-color: #fff;
+    width: 450px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.Task {
+    width: 450px;
+    height: 220px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0.1px 17px;
+}
+
+.Task .card-title {
+    color: #313450;
+    font-weight: bold;
+}
+
+.Task .card-text {
+    color: #313450;
+    font-size: small;
+    padding: 0.5px;
+    margin: 1px;
+}

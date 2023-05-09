@@ -1,0 +1,46 @@
+.sidebar {
+    background-color: #363A53;
+    color: #5F647C;
+    width: 10px;
+    height: 100vh;
+    text-align: center;
+}
+.brand {
+    padding: 10px;
+    text-align: center;
+    background-color: #788CEC;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+.brand-name {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+
+}
+.sidebar-item {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: #313450;
+    color: #DCE3E7;
+}
+
+.sidebar-item.active {
+    background-color: #313450;
+    color: #DCE3E7;
+}
+
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+
+}

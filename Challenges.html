@@ -4,59 +4,40 @@
     <meta charset="UTF-8">
     <title>Today?</title>
     <!----CSS link----->
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sidebar.css"> 
+    <link rel="stylesheet" href="contentStyle.css"> 
 </head>
 <body>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-2 sidebar">
+              <div class="brand">
 
-  <div class="navigation">
-    <ul>
-      <li class="list">
-        <b></b>
-        <b></b>
-        <a href="Home.html">
-          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-          <span class="title">Home</span>
-        </a>
-      </li>
-      <li class="list active">
-        <b></b>
-        <b></b>
-        <a href="#">
-          <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
-          <span class="title">Challenges</span>
-        </a>
-      </li>
-    
-      <li class="list">
-        <b></b>
-        <b></b>
-        <a href="#">
-          <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
-          <span class="title">ToDo</span>
-        </a>
-      </li>
-      <li class="list">
-        <b></b>
-        <b></b>
-        <a href="#">
-          <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-          <span class="title">Sign Out</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+                  <div class="brand-name">Today?</div>
+              </div>
+              <a href="Home.html">
+                  <div class="sidebar-item ">Home</div>
+              </a>
 
-  <div class="toggle">
-    <ion-icon name="menu-outline" class="open"></ion-icon>
-    <ion-icon name="close-outline" class="close"></ion-icon>
-  </div>
-  
-  <!----Font Icon---->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <a href="Challenges.html">
+                  <div class="sidebar-item active">Challenges</div>
+              </a>
+              <a href="#">
+                  <div class="sidebar-item">Todo</div>
+              </a>
+              <a href="#">
+                  <div class="sidebar-item">Sign out</div>
+              </a>
+          </div>
+          <div class="col-9 content">
+              <div class="welcome">
+                  <h1>Hello Alanoud</h1>
+                  <p>Welcome back, you have 5 tasks due tomorrow. lets finish them now!</p>
 
-  <!----JS CDN Link---->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!---Custom File---->
-  <script src="script.js"></script>
+              </div>
+          </div>
+      </div>
 </body>
+
 </html>

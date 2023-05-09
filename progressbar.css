@@ -1,0 +1,63 @@
+
+.progress {
+    float: right;
+    display: flex;
+    margin-left: 90px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.barOverflow {
+    position: relative;
+    overflow: hidden;
+    width: 966px;
+    height: 48px;
+    margin-bottom: -14px;
+    /* bring the numbers up */
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    /* full circle! */
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 7px solid rgb(185, 185, 185);
+    /* half gray, */
+    border-bottom-color: rgb(77, 191, 138);
+    /* half azure */
+    border-left-color: rgb(77, 191, 138);
+}
+
+.progressVal {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(77, 191, 138);
+    padding-top: 20px;
+    width: 97px;
+    height: 97px;
+}
+
+.counter {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+    color: #313450;
+    padding-top: 60px;
+    width: 97px;
+    height: 97px;
+
+}

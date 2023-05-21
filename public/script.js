@@ -1,4 +1,4 @@
-import Task from './task.js';
+import Task from './Task.js';
 var tasks = {};
 
 function fillTasks() {

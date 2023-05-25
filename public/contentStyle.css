@@ -36,3 +36,25 @@ body {
     padding: 0.5px;
     margin: 1px;
 }
+
+.progress-bg{
+    background-color:#DCE3E7;
+    width: 40%;
+    border-radius: 15px;
+}
+.finish{
+    padding: 0;
+    margin: 5px;
+    font-size: 30px;
+}
+.progress{
+    padding: 0;
+    margin: 5%;
+    overflow: visible;
+    height: 3px;
+    font-size: 30px;
+}
+.users{
+    width: 40px;
+    height: 40px;
+}

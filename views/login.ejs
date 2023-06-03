@@ -4,27 +4,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>log in page</title>
-  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="/css/form.css">
 
 </head>
 <body>
     <div class="color">
-        <img src="logo.png" class="img">
+        <img src="/Pics/logo.png" class="img">
     </div>
   <div class="alert-box"><h1 class="alert">Today</h1></div>
-<form action="/Login">
+<form action="/login" method="post">
 
   <div class="form">
     <h1 class="heading">Log in</h1>
   
-    <input type="email" placeholder="email" autocapitalize="off" class="email" required>
-    <input type="password" placeholder="password" autocapitalize="off" class="password" required>
+    <input type="email" placeholder="email" autocapitalize="off" class="email" name="email" >
+    <input type="password" placeholder="pass" autocapitalize="off" class="password" name="pass" >
     <button class="submit-btn">Log in</button>
     <a href="/register" class="link">Don't have an account? Register now!</a>
 
 </div>
 
 </form>
- 
+
+<script src="form.js"></script>
 </body>
 </html>

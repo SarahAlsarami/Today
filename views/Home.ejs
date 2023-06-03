@@ -4,10 +4,10 @@
 <head>
     <title>Today?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="contentStyle.css">
-    <link rel="stylesheet" href="progressbar.css">
-    <script src="script.js"type="module"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/contentStyle.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+    <script src="script.js" type="module"></script>
    
     
 
@@ -21,14 +21,14 @@
 
                     <div class="brand-name">Today?</div>
                 </div>
-                <a href="Home.html">
+                <a href="/Home">
                     <div class="sidebar-item active">Home</div>
                 </a>
 
-                <a href="Challenges.html">
+                <a href="/Challenges">
                     <div class="sidebar-item">Challenges</div>
                 </a>
-                <a href="TODO.html">
+                <a href="/TODO">
                     <div class="sidebar-item">Todo</div>
                 </a>
                 <a href="/logout">
@@ -37,8 +37,9 @@
             </div>
             <div class="col-9 content">
                 <div class="welcome">
-                    <h1>Hello Alanoud</h1>
-                    <p>Welcome back, you have 5 tasks due tomorrow. lets finish them now!</p>
+          
+                        <h1 >Welcome,<%= user.name %>!</h1>
+                  
 
                 </div>
                 <!--هذي مفروض تتعبى حسب اليوزر وش عنده -->

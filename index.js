@@ -1,20 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const flash = require('connect-flash');
+
 const app = express();
 const url = "mongodb://127.0.0.1:27017/todaydb";
 var port = process.env.PORT || 8080;
 const session = require('express-session');
 const passport = require('passport');
-app.use(flash());
+
 const LocalStrategy = require('passport-local').Strategy;
 app.use(session({
 	secret: 'mysecret',
 	resave: false,
 	saveUninitialized: false
   }));
-// Connect to MongoDB
+
 mongoose.connect(url, { useNewUrlParser: true });
 const userSchema = new mongoose.Schema({
 	name: String,
@@ -62,7 +62,7 @@ app.post('/register', (req, res) => {
     pass: req.body.pass
   });
 
-  // Save the user object to the database
+
   user.save()
     .then(() => {
 		res.render('Home', { user: user });
@@ -102,7 +102,7 @@ app.get("/logout", function (req, res) {
       });
 });
 
-// Start the server
+
 app.listen(port, () => {
-  console.log('Server excute on port :'+port);
+  console.log('Server git pull on port :'+port);
 });

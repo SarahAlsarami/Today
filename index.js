@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
-const url = "mongodb://127.0.0.1:27017/todaydb";
+const url = "mongodb+srv://projrcttoday:123456789010@webproject.ipyi8hd.mongodb.net/";
 var port = process.env.PORT || 8080;
 const session = require('express-session');
 const passport = require('passport');

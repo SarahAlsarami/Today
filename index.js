@@ -35,13 +35,10 @@ app.use(passport.session());
 app.get("/", function (req, res) {
     res.render("register");
 });
-  
-
 
 app.get("/register", function (req, res) {
     res.render("register");
 });
-
 
 app.get("/Home", function (req, res) {
     res.render("Home");
@@ -104,5 +101,5 @@ app.get("/logout", function (req, res) {
 
 
 app.listen(port, () => {
-  console.log('Server git pull on port :'+port);
+  console.log('Server running on port :'+port);
 });

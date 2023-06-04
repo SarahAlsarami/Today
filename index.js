@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+
+
 const app = express();
 const url = "mongodb+srv://projrcttoday:123456789010@webproject.ipyi8hd.mongodb.net/";
 var port = process.env.PORT || 8080;
@@ -16,13 +18,10 @@ app.use(session({
   }));
 
 mongoose.connect(url, { useNewUrlParser: true });
-const userSchema = new mongoose.Schema({
-	name: String,
-	email: String,
-	password: String,
-  });
-  
-  const User = mongoose.model('User', userSchema);
+
+const challenge = require('./models/challenge');
+const User = require('./models/User');
+
 // Use body-parser to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -50,6 +49,19 @@ app.get("/TODO", function (req, res) {
     res.render("TODO");
 });
 
+app.post("/send-task", (req, res) => {
+  const NewChallenge = new challenge({
+    name: req.body.name,
+    date: req.body.date,
+    task: req.body.task,
+
+}); NewChallenge.save().then(() => {
+  res.render('Challange', { NewChallenge: NewChallenge });
+  })
+  .catch((err) => {
+    console.error(err);
+    res.status(500).send('Error registering user');
+  });});
 
 app.post('/register', (req, res) => {
   // Create a new user object with the submitted data

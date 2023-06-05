@@ -20,3 +20,6 @@
 
 
 # User Interaction 
+This a flow chart demnstrating user flow of Today's website:
+
+![Flowchart-2](https://github.com/reemabdulmohsen/Today/assets/85634113/adb8b126-59b1-4b9c-8dfe-87bb37b8c129)

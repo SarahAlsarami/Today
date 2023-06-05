@@ -5,8 +5,17 @@
     <title>Today?</title>
     <!----CSS link----->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/calendar-dates.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-check.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/add.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/sidebar.css"> 
     <link rel="stylesheet" href="css/contentStyle.css"> 
+    <link rel="stylesheet" href="css/addChallengeForm.css"> 
+    <link rel="stylesheet" href="css/JoinChallenge.css"> 
+  
 </head>
 <body>
   <div class="container-fluid">
@@ -16,17 +25,17 @@
 
                   <div class="brand-name">Today?</div>
               </div>
-              <a href="/Homev2">
+              <a href="Home.html">
                   <div class="sidebar-item ">Home</div>
               </a>
 
-              <a href="/Challenges">
+              <a href="Challenges.html">
                   <div class="sidebar-item active">Challenges</div>
               </a>
-              <a href="/TODO">
+              <a href="TODO.html">
                   <div class="sidebar-item">Todo</div>
               </a>
-              <a href="/loguot">
+              <a href="#">
                   <div class="sidebar-item">Sign out</div>
               </a>
           </div>
@@ -36,7 +45,24 @@
                   <p>Welcome back, you have 5 tasks due tomorrow. lets finish them now!</p>
               </div>
 
-              <div class="row progress-bg">
+              <div class="create">
+                <input id="createBtn" type="button" class="Btn" value="Create New Challenge">
+                <input id="joinBtn" type="button" class="Btn" value="Join a Challenge">
+              </div>
+
+              <div class="card mb-3 Task">
+
+                <div class="card-body">
+                    <h5 class="card-title">name</h5>
+                    <p class="card-text">task describtion </p>
+                    <!--from database-->
+                </div>
+            </div>
+            <div class="card mb-3 Task">
+
+            </div>
+
+              <!-- <div class="row progress-bg">
                 <div class="col progress" id="pb-parent" style="color: blue;">
                   <div class="progress-bar" id="p1" role="progressbar" style="width:30%"  aria-valuemin="0" aria-valuemax="100">
                   <img class="rounded-circle users" src="../pics/blank.jpg" alt="">
@@ -49,10 +75,90 @@
                   </div>
                 </div>
                 <p class="col-2 finish">&#127942;</p>
-              </div>
+              </div> -->
+
+      
           </div>
+
+      </div></div>
+
+      <div class="Create-form">
+        <header>
+            <button class="close">
+               <i class="gg-close"></i>
+                </button>
+          <h1>Create Challenge</h1>
+          <p>Fill in all information</p>
+          <ul class="task-list">
+            <!-- List items representing tasks will be dynamically added here -->
+          </ul>
+        </header>
+        <form action="send-task" method="post">
+          <div class="input-section challenge-name-section">
+            <input class="challenge-name" type="text" placeholder="ENTER CHALLENGE NAME" autocomplete="off" name ="name"/>
+            <div class="animated-button">
+              <span class="icon-paper-plane">
+                <i class="gg-pen"></i>
+              </span>
+              <span class="next-button challenge-name">
+                <i class="fa fa-arrow-up"></i>
+              </span>
+            </div>
+          </div>
+          <div class="input-section end-date-section folded">
+            <input class="end-date" type="date" name = "date"/>
+            <div class="animated-button">
+              <span class="icon-lock">
+                <i class="gg-calendar-dates"></i>
+              </span>
+              <span class="next-button end-date">
+                <i class="fa fa-arrow-up"></i>
+              </span>
+            </div>
+          </div>
+          <div class="input-section tasks-section folded">
+            <button class="add-task-button"><i class="gg-add"></i></button>
+            <input class="task-input" type="text" placeholder="ENTER A TASK" autocomplete="off" name = "task"/>
+           
+          
+            <div class="animated-button">
+              <span class="icon-repeat-lock">
+                <i class="gg-play-list-check"></i>
+              </span>
+              <span class="next-button tasks">
+                <i class="fa fa-paper-plane"></i>
+              </span>
+            </div>
+          </div>
+          <div class="success">
+            <p>CHALLENGE CREATED</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="Join-form">
+        <header>
+          <button class="closeJoin">
+            <i class="gg-close"></i>
+          </button>
+          <h1>Join Challenge</h1>
+          <p>Enter the challenge code to join:</p>
+        </header>
+        <form id = "joinForm">
+          <div class="input-section challenge-code-section">
+            <input required class="join-code" type="text" placeholder="ENTER CHALLENGE CODE" autocomplete="off" />
+            <div class="submitBtn">
+                <button class="submit-button" type="submit" value="submit">Join</button>
+            </div>
+          </div>
+          <div class="success">
+            <p>SUCCESS: Joined the challenge!</p>
+          </div>
+        </form>
       </div>
       <script src="Challenges.js"></script>
+        <script src="challengesScript.js"></script>
+
 </body>
 
 </html>

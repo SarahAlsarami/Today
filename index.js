@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-
+let username;
 const app = express();
 const url = "mongodb+srv://projrcttoday:123456789010@webproject.ipyi8hd.mongodb.net/";
 var port = process.env.PORT || 8080;
@@ -40,10 +40,10 @@ app.get("/register", function (req, res) {
 });
 
 app.get("/Home", function (req, res) {
-    res.render("Home");
+    res.render("Home",{ user: username });
 });
 app.get("/Challenges", function (req, res) {
- res.render("Challenges");
+ res.render("Challenges",{ user: username});
 });
 app.get("/TODO", function (req, res) {
     res.render("TODO");
@@ -91,6 +91,7 @@ app.post('/login', (req, res,) => {
       if (!user) {
         return res.status(401).send('<script>alert("the email or password are not correct");</script>');
       }
+      username=user;
 	  res.render("Home", { user: user });
     })
     .catch((err) => {

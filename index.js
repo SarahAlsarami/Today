@@ -33,20 +33,20 @@ app.use(passport.session());
 
 
 app.get("/", function (req, res) {
-    res.render("/register");
+    res.render("register");
 });
 app.get("/register", function (req, res) {
-    res.render("/register");
+    res.render("register");
 });
 
 app.get("/Home", function (req, res) {
-    res.render("/Home");
+    res.render("Home");
 });
 app.get("/Challenges", function (req, res) {
- res.render("/Challenges");
+ res.render("Challenges");
 });
 app.get("/TODO", function (req, res) {
-    res.render("/TODO");
+    res.render("TODO");
 });
 
 app.post("/send-task", (req, res) => {
@@ -56,7 +56,7 @@ app.post("/send-task", (req, res) => {
     task: req.body.task,
 
 }); NewChallenge.save().then(() => {
-  res.render("/Challange", { NewChallenge: NewChallenge });
+  res.render("Challange", { NewChallenge: NewChallenge });
   })
   .catch((err) => {
     console.error(err);
@@ -72,7 +72,7 @@ app.post('/register', (req, res) => {
 
   user.save()
     .then(() => {
-		res.render("/Home", { user: user });
+		res.render("Home", { user: user });
     })
     .catch((err) => {
       console.error(err);
@@ -81,7 +81,7 @@ app.post('/register', (req, res) => {
 });
 
 app.get("/login", function (req, res) {
-    res.render("/login");
+    res.render("login");
 });
 
 app.post('/login', (req, res,) => {
@@ -91,7 +91,7 @@ app.post('/login', (req, res,) => {
       if (!user) {
         return res.status(401).send('<script>alert("the email or password are not correct");</script>');
       }
-	  res.render("/Home", { user: user });
+	  res.render("Home", { user: user });
     })
     .catch((err) => {
       console.error(err);

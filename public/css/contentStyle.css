@@ -9,17 +9,10 @@ body {
     margin-left: 30px;
 }
 
-.Task:hover {
-    background-color: #fff;
-    width: 450px;
-    height: 400px;
-    margin: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
 
 .Task {
     width: 450px;
-    height: 220px;
+    height: 100%;
     background-color: #fff;
     margin: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0.1px 17px;
@@ -60,8 +53,17 @@ body {
 }
 .progress-bar{
     align-items: end;
-    background-color: #323B50;
+    background-color: #DCE3E7;
+    padding: 10px;
 }
 .progress-bar p{
     margin: 10px 0;
 }
+
+.Btn{
+    border-radius: 5px;
+    background: #788CEC;
+    border: none;
+    color: white;
+    padding: 15px;
+ }

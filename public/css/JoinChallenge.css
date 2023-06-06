@@ -1,0 +1,140 @@
+.Join-form {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 15%;
+    background: transparent;
+    display: none;
+  }
+  
+  .Join-form header {
+    position: relative;
+    z-index: 4;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .Join-form header h1 {
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #333;
+    font-size: 23px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .Join-form header p {
+    word-spacing: 0px;
+    color: rgb(159, 172, 182);
+    font-size: 17px;
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  
+  .Join-form form {
+    position: relative;
+  }
+  
+  .Join-form .input-section {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 75px;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in;
+  }
+  
+  .Join-form .input-section input {
+    background: lighten(rgb(243, 243, 251), 5%);
+    color: #788CEC;
+    width: 100%;
+    border: 0;
+    padding: 20px 40px;
+    margin: 0;
+  }
+  
+  .Join-form .input-section input:focus {
+    outline: none;
+  }
+  
+  .Join-form .input-section input::placeholder {
+    color: #788CEC;
+    font-weight: 100;
+  }
+  
+  .Join-form .submit-button {
+    width: 100%;
+    background-color: #788CEC;
+  }
+  
+  .Join-form .submit-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 75px;
+    text-align: center;
+    height: 75px;
+    transition: all 0.2s ease-in;
+    border: none;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    
+
+  }
+  .Join-form .submit-button:focus {
+    outline: none;
+  }
+  
+  .success {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 75px;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in;
+    background: limegreen;
+    margin-top: -75px;
+  }
+  
+  .success p {
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .closeJoin {
+    background-color: white;
+    color: #000;
+    border: none;
+    font-weight: 100;
+    height: 30px;
+    width: 30px;
+    margin-left: 90%;
+  }
+  
+  .add-task-button {
+    border: none;
+    color: #788CEC;
+    font-size: 40px;
+  }
+  

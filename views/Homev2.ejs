@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/contentStyle.css">
     <link rel="stylesheet" href="css/progressbar.css">
-    <script src="script.js"type="module"></script>
+ 
    
 <style>
 
@@ -39,7 +39,7 @@
             <div class="col-9 content">
                 <div class="welcome">
                     <!--Name of user-->
-                    <h1>Hello <%= user.name %></h1>
+                    <h1 id="name"></h1>
                     <p>Welcome Back! get everythings done <b>Today?</b></p>
 
                 </div>
@@ -49,15 +49,17 @@
                 
                     <p>Wish it, plan it, do it!</p>
                 </div>
+        
                 <hr>
 
 <p>Challenges</p>
+
                     <div class="text-center" style="margin-left: 250px;">
-                            <form class="d-flex justify-content-center align-items-center mb-4" style="width: 75%;">
+                            <form class="d-flex justify-content-center align-items-center mb-4" style="width: 75%;" action="/writefile" method="post">
                                 <div class="form-outline flex-fill">
-                                  <input type="text" id="myInput" class="form-control" />
+                                  <input type="text" id="myInput" class="form-control" name="singltask"/>
                                 </div>
-                                <button id="Addbtn" type="submit" value="submit" class="btn btn-info ms-2"
+                                <button  id="Addbtn" type="submit" value="submit" class="btn btn-info ms-2 "
                                   style="margin: 5px; background-color:#788CEC; border-color: #788CEC;">Add new task</button>
                               </form>
                             </div>
@@ -67,12 +69,13 @@
                     </div>
 
 
-
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+  
 </body>
 
 </html>

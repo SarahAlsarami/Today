@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Today?</title>
@@ -11,153 +12,162 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/calendar-dates.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-check.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/add.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/sidebar.css"> 
-    <link rel="stylesheet" href="css/contentStyle.css"> 
-    <link rel="stylesheet" href="css/addChallengeForm.css"> 
-    <link rel="stylesheet" href="css/JoinChallenge.css"> 
-  
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/contentStyle.css">
+    <link rel="stylesheet" href="css/addChallengeForm.css">
+    <link rel="stylesheet" href="css/JoinChallenge.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/fireworks.css">
+
+   
+
 </head>
+
 <body>
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-2 sidebar">
-              <div class="brand">
+    <div class="js-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 sidebar">
+                <div class="brand">
 
-                  <div class="brand-name">Today?</div>
-              </div>
-              <a href="Home.html">
-                  <div class="sidebar-item ">Home</div>
-              </a>
-
-              <a href="Challenges.html">
-                  <div class="sidebar-item active">Challenges</div>
-              </a>
-              <a href="TODO.html">
-                  <div class="sidebar-item">Todo</div>
-              </a>
-              <a href="#">
-                  <div class="sidebar-item">Sign out</div>
-              </a>
-          </div>
-          <div class="col-9 content">
-              <div class="welcome">
-                  <h1>Hello Alanoud</h1>
-                  <p>Welcome back, you have 5 tasks due tomorrow. lets finish them now!</p>
-              </div>
-
-              <div class="create">
-                <input id="createBtn" type="button" class="Btn" value="Create New Challenge">
-                <input id="joinBtn" type="button" class="Btn" value="Join a Challenge">
-              </div>
-
-              <div class="card mb-3 Task">
-
-                <div class="card-body">
-                    <h5 class="card-title">name</h5>
-                    <p class="card-text">task describtion </p>
-                    <!--from database-->
+                    <div class="brand-name">Today?</div>
                 </div>
-            </div>
-            <div class="card mb-3 Task">
+                <a href="/Homev2">
+                    <div class="sidebar-item ">Home</div>
+                </a>
 
+                <a href="/Challenges">
+                    <div class="sidebar-item active">Challenges</div>
+                </a>
+                <a href="/TODO">
+                    <div class="sidebar-item">Todo</div>
+                </a>
+                <a href="/logout">
+                    <div class="sidebar-item">Sign out</div>
+                </a>
             </div>
-
-              <!-- <div class="row progress-bg">
-                <div class="col progress" id="pb-parent" style="color: blue;">
-                  <div class="progress-bar" id="p1" role="progressbar" style="width:30%"  aria-valuemin="0" aria-valuemax="100">
-                  <img class="rounded-circle users" src="../pics/blank.jpg" alt="">
-                  </div>
-                  <div class="progress-bar" id="p2" role="progressbar" style="width:50%"  aria-valuemin="0" aria-valuemax="100">
-                    <img class="rounded-circle users" src="../Pics/day.jpeg" alt="">
-                  </div>
-                  <div class="progress-bar" id="p3" role="progressbar" style="width:20%"  aria-valuemin="0" aria-valuemax="100">
-                    <img class="rounded-circle users" src="../Pics/cool.jpg" alt="">
-                  </div>
+            <div class="col-9 content">
+                <div class="welcome">
+                    <h1 id="name"></h1>
+                    <p>Welcome back, lets finish first!</p>
                 </div>
-                <p class="col-2 finish">&#127942;</p>
-              </div> -->
 
-      
-          </div>
+                <div class="create">
+                    <input id="createBtn" type="button" class="Btn" value="Create New Challenge">
+                    <input id="joinBtn" type="button" class="Btn" value="Join a Challenge">
+                </div>
 
-      </div></div>
+               
+<div id = "tasks">
 
-      <div class="Create-form">
+</div>
+
+
+  
+
+                <!-- <div id="tasks" class="card-deck">
+                  <% userChallenges.forEach((challenge, index) => { %>
+                    <div id="task<%= index %>" class="card mb-3 Task">
+                      <div id="body" class="card-body">
+                        <div id="row" class="row">
+                          <div id="challenge<%= index %>" class="col-md-5">
+                            <h5 class="card-title"><%= challenge.name %></h5>
+                            <p class="card-text"><%= challenge.date %></p>
+                            <p class="card-text"><%= challenge.task %></p>
+                          </div>
+                          <div id="progress<%= index %>" class="col-md-7 row">
+                          Add your progress bar or any other information here -->
+                   <!--          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% }); %>
+                </div> -->
+
+           
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <!-- <div class="Create-form">
+
         <header>
             <button class="close">
-               <i class="gg-close"></i>
-                </button>
-          <h1>Create Challenge</h1>
-          <p>Fill in all information</p>
-          <ul class="task-list">
-            <!-- List items representing tasks will be dynamically added here -->
-          </ul>
+                <i class="gg-close"></i>
+            </button>
+            <h1>Create Challenge</h1>
+            <p>Fill in all information</p>
+            <ul class="task-list">
+ 
+            </ul>
         </header>
         <form action="send-task" method="post">
-          <div class="input-section challenge-name-section">
-            <input class="challenge-name" type="text" placeholder="ENTER CHALLENGE NAME" autocomplete="off" name ="name"/>
-            <div class="animated-button">
-              <span class="icon-paper-plane">
-                <i class="gg-pen"></i>
-              </span>
-              <span class="next-button challenge-name">
-                <i class="fa fa-arrow-up"></i>
-              </span>
+            <div class="input-section challenge-name-section">
+                <input class="challenge-name" type="text" placeholder="ENTER CHALLENGE NAME" autocomplete="off"
+                    name="name" />
+                <div class="animated-button">
+                    <span class="icon-paper-plane">
+                        <i class="gg-pen"></i>
+                    </span>
+                    <span class="next-button challenge-name">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
             </div>
-          </div>
-          <div class="input-section end-date-section folded">
-            <input class="end-date" type="date" name = "date"/>
-            <div class="animated-button">
-              <span class="icon-lock">
-                <i class="gg-calendar-dates"></i>
-              </span>
-              <span class="next-button end-date">
-                <i class="fa fa-arrow-up"></i>
-              </span>
+            <div class="input-section end-date-section folded">
+                <input class="end-date" type="date" name="date" />
+                <div class="animated-button">
+                    <span class="icon-lock">
+                        <i class="gg-calendar-dates"></i>
+                    </span>
+                    <span class="next-button end-date">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
             </div>
-          </div>
-          <div class="input-section tasks-section folded">
-            <button class="add-task-button"><i class="gg-add"></i></button>
-            <input class="task-input" type="text" placeholder="ENTER A TASK" autocomplete="off" name = "task"/>
-           
-          
-            <div class="animated-button">
-              <span class="icon-repeat-lock">
-                <i class="gg-play-list-check"></i>
-              </span>
-              <span class="next-button tasks">
-                <i class="fa fa-paper-plane"></i>
-              </span>
-            </div>
-          </div>
-          <div class="success">
-            <p>CHALLENGE CREATED</p>
-          </div>
-        </form>
-      </div>
+            <div class="input-section tasks-section folded">
+                <button class="add-task-button"><i class="gg-add"></i></button>
+                <input class="task-input" type="text" placeholder="ENTER A TASK" autocomplete="off" name="task" />
 
-      <div class="Join-form">
-        <header>
-          <button class="closeJoin">
-            <i class="gg-close"></i>
-          </button>
-          <h1>Join Challenge</h1>
-          <p>Enter the challenge code to join:</p>
-        </header>
-        <form id = "joinForm">
-          <div class="input-section challenge-code-section">
-            <input required class="join-code" type="text" placeholder="ENTER CHALLENGE CODE" autocomplete="off" />
-            <div class="submitBtn">
-                <button class="submit-button" type="submit" value="submit">Join</button>
+
+                <div class="animated-button">
+                    <button>Done</button>
+                </div>
             </div>
-          </div>
-          <div class="success">
-            <p>SUCCESS: Joined the challenge!</p>
-          </div>
+            <div class="success">
+                <p>CHALLENGE CREATED</p>
+            </div>
         </form>
-      </div>
-      <script src="Challenges.js"></script>
-        <script src="challengesScript.js"></script>
+    </div>
+
+    <div class="Join-form">
+        <header>
+            <button class="closeJoin">
+                <i class="gg-close"></i>
+            </button>
+            <h1>Join Challenge</h1>
+            <p>Enter the challenge code to join:</p>
+        </header>
+        <form id="joinForm">
+            <div class="input-section challenge-code-section">
+                <input required class="join-code" type="text" placeholder="ENTER CHALLENGE CODE" autocomplete="off" />
+                <div class="submitBtn">
+                    <button class="submit-button" type="submit" value="submit">Join</button>
+                </div>
+            </div>
+            <div class="success">
+                <p>SUCCESS: Joined the challenge!</p>
+            </div>
+        </form>
+    </div> -->
+    <script src="Challenges.js"></script>
+    <script src="challengesScript.js"></script>
+    <script src="index.js"type="module"></script>
 
 </body>
 

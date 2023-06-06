@@ -120,7 +120,9 @@
                 <hr>
                 <h1 style="font-size: 25px;padding-top: 10px;padding-bottom: 0px;">Must To Do</h1>
 
-
+<ul id="alltask">
+  <li></li>
+</ul>
 
                 <!-- Tabs content -->
                 <div class="tab-content" id="ex1-content">
@@ -130,7 +132,7 @@
                       <li id="box-1li" class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
                         style="background-color: #f4f6f7; padding: 15px; padding-left: 20px ;">
                         <input type="checkbox" id="box-1" name="checkbox" onchange="Complete(this)">
-                        <label for="box-1">Sustainable typewriter cronut</label>
+                        <label id="io" for="box-1"></label>
                         <i class="bi bi-trash" onclick="RemoveTask(this)"style="color: rgb(167, 7, 7); position: absolute;right: 20px;"></i>
                       </li>
                   
@@ -154,6 +156,7 @@
 
         </div>
         <script src="todo.js"></script>
+        <script src="script.js"type="module"></script>
 
 </body>
 

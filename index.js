@@ -1,7 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 const fs = require('fs')
+=======
+
+let username;
+>>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
 const app = express();
 const url = "mongodb+srv://projrcttoday:123456789010@webproject.ipyi8hd.mongodb.net/";
 var port = process.env.PORT || 8080;
@@ -24,18 +29,20 @@ const User = require('./models/User');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
+
 app.use(express.static('public'));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", function (req, res) {
   res.render("register");
 });
-
 app.get("/register", function (req, res) {
   res.render("register");
 });
 
+<<<<<<< HEAD
 app.get("/Homev2", function (req, res) {
   res.render("Homev2");
 });
@@ -50,6 +57,13 @@ app.get("/Challenges", async function (req, res) {
     console.error(err);
     res.status(500).send('Error retrieving challenges');
   }
+=======
+app.get("/Home", function (req, res) {
+    res.render("Home",{ user: username });
+});
+app.get("/Challenges", function (req, res) {
+ res.render("Challenges",{ user: username});
+>>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
 });
 
 app.get("/TODO", function (req, res) {
@@ -60,6 +74,7 @@ app.post("/send-task", (req, res) => {
  
   fs.writeFile('public/challenge.txt', req.body.name +"\n" + req.body.date + "\n" + req.body.task +"\n end challenge", (err) => {
 
+<<<<<<< HEAD
     if (err) throw err;
 
     else{
@@ -71,6 +86,15 @@ app.post("/send-task", (req, res) => {
  })
 
 });
+=======
+}); NewChallenge.save().then(() => {
+  res.render("Challange", { NewChallenge: NewChallenge });
+  })
+  .catch((err) => {
+    console.error(err);
+    res.status(500).send('Error registering user');
+  });});
+>>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
 
 app.post('/register', (req, res) => {
   const user = new User({
@@ -81,7 +105,11 @@ app.post('/register', (req, res) => {
 
   user.save()
     .then(() => {
+<<<<<<< HEAD
       res.render('Homev2', { user: user });
+=======
+		res.render("Home", { user: user });
+>>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
     })
     .catch((err) => {
       console.error(err);
@@ -106,6 +134,7 @@ app.post('/login', (req, res,) => {
         return res.status(401).send('<script>alert("the email or password are not correct");</script>');
 
       }
+<<<<<<< HEAD
 
       fs.writeFile('public/user.txt', user.name, (err) => {
 
@@ -123,6 +152,10 @@ app.post('/login', (req, res,) => {
 
    
 
+=======
+      username=user;
+	  res.render("Home", { user: user });
+>>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
     })
 
     .catch((err) => {

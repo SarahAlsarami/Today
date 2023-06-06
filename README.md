@@ -23,11 +23,16 @@
 * ## ToDo page:
    <img width="990" alt="ToDo page" src="https://github.com/reemabdulmohsen/Today/assets/85634113/5be94e0f-7b41-454b-8eff-3de631485119">
 * ## Challanges Page :
+<img width="990" alt="Challanges" src="https://github.com/reemabdulmohsen/Today/assets/85634113/98a8e5c6-9df7-4414-8e01-248ba6f2ec2d">
+  After Finishing all tasks:
+  <img width="990" alt="Screen Shot 2023-06-06 at 7 34 34 AM" src="https://github.com/reemabdulmohsen/Today/assets/85634113/b9204c98-ea81-45dd-991c-42659812ec04">
 
 
 * ## Registering Page:
   <img width="990" alt="Registering page" src="https://github.com/reemabdulmohsen/Today/assets/85634113/37fd02ba-1d00-43d0-bbb8-0bd26450b100">
 
+* ## Login Page:
+<img width="990" alt="Screen Shot 2023-06-05 at 10 42 40 AM" src="https://github.com/reemabdulmohsen/Today/assets/85634113/76c154eb-677d-4199-8364-ba77bbc484c8">
 
 
 # User Interaction 

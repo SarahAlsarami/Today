@@ -62,8 +62,7 @@ app.get("/Home", function (req, res) {
     res.render("Home",{ user: username });
 });
 app.get("/Challenges", function (req, res) {
- res.render("Challenges",{ user: username});
->>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
+ res.render("Challenges")
 });
 
 app.get("/TODO", function (req, res) {
@@ -105,20 +104,24 @@ app.post('/register', (req, res) => {
 
   user.save()
     .then(() => {
-<<<<<<< HEAD
-      res.render('Homev2', { user: user });
-=======
-		res.render("Home", { user: user });
->>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
+      
+      fs.writeFile('public/user.txt', user.name, (err) => {
+
+        if (err) throw err;
+
+        else{
+
+           console.log("The file is updated with the given data")
+
+        }
+
+     })
+      res.render('Homev2');
     })
     .catch((err) => {
       console.error(err);
       res.status(500).send('Error registering user');
     });
-});
-
-app.get("/login", function (req, res) {
-  res.render("login");
 });
 
 app.post('/login', (req, res,) => {
@@ -152,11 +155,7 @@ app.post('/login', (req, res,) => {
 
    
 
-=======
-      username=user;
-	  res.render("Home", { user: user });
->>>>>>> c6a5c085e854809bd7e96ae8d414139629b1e51a
-    })
+
 
     .catch((err) => {
 
@@ -167,6 +166,21 @@ app.post('/login', (req, res,) => {
     });
 
   });
+
+
+  app.post("/writefile",(req,res)=>{
+    fs.writeFile('public/task.txt', req.body.singltask , (err) => {
+  
+      if (err) throw err;
+      else{
+         console.log("The file is updated with the given data"+req.body.singltask)
+         const message = 'Aded task succsfully!';
+         res.render('Homev2', { message });
+  
+      }
+  
+  })});
+  
 
 app.get("/logout", function (req, res) {
   req.logout(function (err) {
